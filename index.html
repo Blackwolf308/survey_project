@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>You did it loser!</title>
+        <title>Please complete this survey</title>
         <link rel="stylesheet"
               href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
               integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
               crossorigin="anonymous">
-        <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.2.2.min.js"
+                integrity="sha256-36cp2Co+/62rEAAYHLmRCPIych47CvdM+uTBJwSzWjI="   crossorigin="anonymous"></script>
+        <script src="survey_frontend.js"></script>
     </head>
     <body>
         <div class="container">
-            <div class="row">
+            <form class="form">
                 <div class="form-group">
                     <select class="form-control input-lg" id='course'>
                         <option disabled>What course are you taking?</option>
-                        <option value='1' >1</option>
                     </select>
                 </div>
-            </div>
+                <button type="button" class="btn btn-success">Submit</button>
+            </form>
         </div>
     </body>
 </html>

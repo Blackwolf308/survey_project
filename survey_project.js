@@ -33,10 +33,12 @@ app.get('/get-courses', function(req, res) {
         if (err) {
             console.log(err);
         } else {
-            console.log('success');
             res.end(JSON.stringify(rows));
         };
     });
 });
 
 app.listen(port);
+console.log ("node is listening " + port);
+
+
