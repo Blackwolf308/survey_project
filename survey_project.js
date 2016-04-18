@@ -39,6 +39,17 @@ app.get('/get-courses', function(req, res) {
     });
 });
 
+app.post('/post-responses', function(req, res) {
+    var myQuery = "INSERT INTO responses(resp1, resp2, resp3, resp4, resp5, c_id) VALUES (" +  req.query.resp1 + ", " + req.query.resp2 + ", " + req.query.resp3 + ", " + req.query.resp4 + ", " + req.query.resp5 + ")";
+    survey_project.query(myQuery, function(err, rows) {
+        if (err) {
+            console.log("something went wrong");
+        }   else {
+            res.end('submitted');
+        }
+    });
+});
+
 app.listen(port);
 console.log ("node is listening " + port);
 
